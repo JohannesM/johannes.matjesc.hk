@@ -13,6 +13,6 @@ matjeschk.com,
 matjeschk.de,
 *.matjeschk.de,
 matjeschk.org,
-*.matjeschk.org:{$PORT} {
+*.matjeschk.org:{env.PORT} {
         redir https://johannes.matjesc.hk{uri}
 }
