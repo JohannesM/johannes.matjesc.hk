@@ -1,3 +1,7 @@
+{
+        auto_https off
+}
+
 johannes.matjesc.hk {
         file_server
 }
