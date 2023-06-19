@@ -6,13 +6,6 @@ johannes.matjesc.hk {
         file_server
 }
 
-matjesc.hk,
-*.matjesc.hk,
-matjeschk.com,
-*.matjeschk.com,
-matjeschk.de,
-*.matjeschk.de,
-matjeschk.org,
-*.matjeschk.org:{env.PORT} {
+:{$PORT} {
         redir https://johannes.matjesc.hk{uri}
 }
