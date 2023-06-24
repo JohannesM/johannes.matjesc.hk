@@ -2,10 +2,6 @@
         auto_https off
 }
 
-https://johannes.matjesc.hk:{$PORT} {
+http://johannes.matjesc.hk:{$PORT} {
         file_server
-}
-
-:{$PORT} {
-        redir https://johannes.matjesc.hk{uri}
 }
