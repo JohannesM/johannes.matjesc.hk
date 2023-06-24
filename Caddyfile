@@ -2,7 +2,7 @@
         auto_https off
 }
 
-https://johannes.matjesc.hk {
+https://johannes.matjesc.hk:{$PORT} {
         file_server
 }
 
