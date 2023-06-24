@@ -5,3 +5,7 @@
 http://johannes.matjesc.hk:{$PORT} {
         file_server
 }
+
+:{$PORT} {
+        redir http://johannes.matjesc.hk{uri}
+}
