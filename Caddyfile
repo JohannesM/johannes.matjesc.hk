@@ -2,7 +2,7 @@
         auto_https off
 }
 
-johannes.matjesc.hk {
+https://johannes.matjesc.hk {
         file_server
 }
 
