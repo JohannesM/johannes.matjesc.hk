@@ -3,6 +3,10 @@
         debug
 }
 
+:{$PORT} {
+        response "Host: {host}\nnew line" 200
+}
+
 #https://johannes.matjesc.hk {
 #        file_server
 #}
@@ -12,10 +16,10 @@
 #        #redir https://johannes.matjesc.hk{uri}
 #}
 
-@redirect {
-        expression `{http.request.host.labels.2} != "ww10"`
-}
-redir @redirect https://ww10.{http.request.host.labels.1}.{http.request.host.labels.0}
+#@redirect {
+#        expression `{http.request.host.labels.2} != "ww10"`
+#}
+#redir @redirect https://ww10.{http.request.host.labels.1}.{http.request.host.labels.0}
 
 #https:// {
 #  @www header_regexp www Host ^www\.(.*)$
