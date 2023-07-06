@@ -1,11 +1,13 @@
-#{
-#        auto_https off
-#}
-
-https://johannes.matjesc.hk {
-        file_server
+{
+        #auto_https off
+        debug
 }
 
-http://:{$PORT} {
-        redir https://johannes.matjesc.hk{uri}
+#https://johannes.matjesc.hk {
+#        file_server
+#}
+
+:{$PORT} {
+        file_server
+        #redir https://johannes.matjesc.hk{uri}
 }
