@@ -7,7 +7,19 @@
 #        file_server
 #}
 
-:{$PORT} {
-        file_server
-        #redir https://johannes.matjesc.hk{uri}
+#:{$PORT} {
+#        file_server
+#        #redir https://johannes.matjesc.hk{uri}
+#}
+
+@redirect {
+        expression `{http.request.host.labels.2} != "ww10"`
 }
+redir @redirect https://ww10.{http.request.host.labels.1}.{http.request.host.labels.0}
+
+#https:// {
+#  @www header_regexp www Host ^www\.(.*)$
+# redir @www https://{re.www.1} 301
+#
+#  # Code to handle sites here
+#}
