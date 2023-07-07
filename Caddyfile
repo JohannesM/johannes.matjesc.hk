@@ -1,10 +1,15 @@
 {
-        #auto_https off
+        auto_https off
         debug
 }
 
 :{$PORT} {
-        response "Host: {host}\nnew line" 200
+#        response "Host: {host}\nnew line" 200
+
+        @redirect `{host} != "johannes.matjesc.hk"`
+
+        redir @redirect https://johannes.matjesc.hk{uri}
+
 }
 
 #https://johannes.matjesc.hk {
@@ -13,13 +18,9 @@
 
 #:{$PORT} {
 #        file_server
+#
 #        #redir https://johannes.matjesc.hk{uri}
 #}
-
-#@redirect {
-#        expression `{http.request.host.labels.2} != "ww10"`
-#}
-#redir @redirect https://ww10.{http.request.host.labels.1}.{http.request.host.labels.0}
 
 #https:// {
 #  @www header_regexp www Host ^www\.(.*)$
