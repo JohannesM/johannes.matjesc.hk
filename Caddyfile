@@ -4,12 +4,10 @@
 }
 
 :{$PORT} {
-#        response "Host: {host}\nnew line" 200
-
         @redirect `{host} != "johannes.matjesc.hk"`
-
         redir @redirect https://johannes.matjesc.hk{uri}
-
+        response "Host: {host}\nnew line" 200
+#        file_server
 }
 
 #https://johannes.matjesc.hk {
