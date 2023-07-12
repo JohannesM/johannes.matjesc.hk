@@ -1,28 +1,7 @@
 {
         auto_https off
-        debug
 }
 
 :{$PORT} {
-        @redirect `{host} != "johannes.matjesc.hk"`
-        redir @redirect https://johannes.matjesc.hk{uri}
-        response "Host: {host}\nnew line" 200
-#        file_server
+        file_server
 }
-
-#https://johannes.matjesc.hk {
-#        file_server
-#}
-
-#:{$PORT} {
-#        file_server
-#
-#        #redir https://johannes.matjesc.hk{uri}
-#}
-
-#https:// {
-#  @www header_regexp www Host ^www\.(.*)$
-# redir @www https://{re.www.1} 301
-#
-#  # Code to handle sites here
-#}
