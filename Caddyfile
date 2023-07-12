@@ -1,2 +1,7 @@
-auto_https off
-file_server
+{
+  auto_https off
+}
+
+:{env.PORT} {
+  file_server
+}
