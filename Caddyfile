@@ -1,7 +1,2 @@
-{
-        auto_https off
-}
-
-:{$PORT} {
-        file_server
-}
+auto_https off
+file_server
