@@ -1,4 +1,0 @@
-Contact: mailto:joh@nnes.matjesc.hk
-Expires: 2027-01-01T00:00
-Encryption: https://johannes.matjesc.hk/46ff1de2.asc
-Preferred-Languages: de, en
